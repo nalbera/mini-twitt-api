@@ -3,11 +3,12 @@ import connection from "../config/configDb";
 
 class User extends Model<InferAttributes<User>, InferCreationAttributes<User>>{
     declare id: CreationOptional<number>;
-    declare email: string;
-    declare password: string;
-    declare username: string;
-    declare avatar: string;
-    declare active: boolean;
+    declare email?: string;
+    declare password?: string;
+    declare userFirstName?: string;
+    declare userLastName?: string;
+    declare avatar?: string;
+    declare active?: boolean;
 };
 
 User.init(
@@ -26,11 +27,17 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        username: {
+        userFirstName: {
             type: DataTypes.STRING,
+            defaultValue: null
+        },
+        userLastName:{
+            type: DataTypes.STRING,
+            defaultValue: null
         },
         avatar: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            defaultValue: null,
         },
         active: {
             type: DataTypes.BOOLEAN,

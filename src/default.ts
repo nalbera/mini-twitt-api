@@ -11,6 +11,10 @@ const config = {
       HOST: process.env.DATABASE_HOST ?? '',
       PORT: process.env.DATABASE_PORT ?? '',
       DIALECT: process.env.DATABASE_DIALECT as Dialect ?? 'postgres'
+    },
+
+    JWT:{
+      SECRET: process.env.SECRET ?? ''
     }
   }
   export default config;
