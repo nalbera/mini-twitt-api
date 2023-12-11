@@ -27,3 +27,5 @@ const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
         response.Error(res, error);
     }
 }
+
+export default authMiddleware;
