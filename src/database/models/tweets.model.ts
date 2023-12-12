@@ -4,8 +4,8 @@ import User from "./users.model";
 
 class Tweets extends Model<InferAttributes<Tweets>, InferCreationAttributes<Tweets>>{
     declare id: CreationOptional<number>;
-    declare text: string;
-    declare user_id: ForeignKey<User['id']>;
+    declare text?: string;
+    declare user_id?: ForeignKey<User['id']>;
 };
 
 Tweets.init(
