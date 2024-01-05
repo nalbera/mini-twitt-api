@@ -54,7 +54,7 @@ export class HttpResponse {
   Conflict(res: Response, data?: any): Response {
     return res.status(HttpStatus.CONFLICT).json({
       status: HttpStatus.CONFLICT,
-      message: "The user is already registered",
+      message: "Conflict",
       error: data
     });
   }
