@@ -5,6 +5,9 @@ import getAllTweetsService from "./getAllTweetsService";
 import deleteTweetByIdService from "./deleteTweetByIdService";
 import getPhotosByTweetService from "./getPhotosByTweetService";
 import deletePhotoByTweetService from "./deletePhotoByTweetService";
+import voteExistsTweetService from "./voteExistsTweetService";
+import insertVoteTweetsService from "./insertVoteTweetsService";
+import getAverageVotesService from "./getAverageVotesService";
 
 export {
     insertTweetService,
@@ -13,5 +16,8 @@ export {
     getAllTweetsService,
     deleteTweetByIdService,
     getPhotosByTweetService,
-    deletePhotoByTweetService
+    deletePhotoByTweetService,
+    voteExistsTweetService,
+    insertVoteTweetsService,
+    getAverageVotesService
 }
